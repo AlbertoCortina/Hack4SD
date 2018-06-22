@@ -1,0 +1,1 @@
+﻿ Database.SetInitializer(new DatabaseInitializer());
