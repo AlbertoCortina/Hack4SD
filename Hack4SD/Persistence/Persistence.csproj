@@ -48,9 +48,6 @@
     <Compile Include="Interfaces\ICampañaPersistence.cs" />
 
     <Compile Include="Implementations\IIdeaSosteniblePersistenceImpl.cs" />
-    <Compile Include="Implementations\IPersistenceImpl.cs" />
-    <Compile Include="Implementations\IUserPersistenceImpl.cs" />
-    <Compile Include="Implementations\IValoracionPersistenceImpl.cs" />
     <Compile Include="Interfaces\IIdeaSosteniblePersistence.cs" />
 
     <Compile Include="Interfaces\IUserPersistence.cs" />
