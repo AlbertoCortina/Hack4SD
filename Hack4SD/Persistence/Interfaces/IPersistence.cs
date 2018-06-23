@@ -10,5 +10,6 @@ namespace Persistence.Interfaces
     {
         IUserPersistence getUserPersistence();
         IValoracionPersistence getValoracionPersistence();
+        ICampañaPersistence getCampañaPersistence();
     }
 }

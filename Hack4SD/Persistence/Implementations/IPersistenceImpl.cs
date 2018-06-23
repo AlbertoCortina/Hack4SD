@@ -11,6 +11,7 @@ namespace Persistence.Implementations
     {
         public IUserPersistence getUserPersistence() => new IUserPersistenceImpl();
         public IValoracionPersistence getValoracionPersistence() => new IValoracionPersistenceImpl();
+        public ICampañaPersistence getCampañaPersistence() => new ICampañaPersitenceImpl();
 
     }
 }

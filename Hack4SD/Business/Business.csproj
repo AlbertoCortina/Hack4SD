@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory.cs" />
+    <Compile Include="Implementations\ICampañaServiceImpl.cs" />
     <Compile Include="Implementations\IMinubeServiceImpl.cs" />
     <Compile Include="Implementations\IUserServiceImpl.cs" />
     <Compile Include="Implementations\IValoracionServiceImpl.cs" />
+    <Compile Include="Interfaces\ICampañasService.cs" />
     <Compile Include="Interfaces\IMinubeService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Interfaces\IValoracionService.cs" />

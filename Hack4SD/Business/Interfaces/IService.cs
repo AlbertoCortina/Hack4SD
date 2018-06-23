@@ -12,5 +12,7 @@ namespace Business.Services
         IMinubeService getMinubeService();
 
         IUserService getUserService();
+        IValoracionService getValoracionService();
+        ICampañaService getCampañaService();
     }
 }
