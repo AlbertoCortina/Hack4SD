@@ -10,5 +10,7 @@ namespace Business.Interfaces
     public interface IMinubeService
     {
         List<Country> getAllCountries();
+
+        List<City> getAllCities(String countryId);
     }
 }
