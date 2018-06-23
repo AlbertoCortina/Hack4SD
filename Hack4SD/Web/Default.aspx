@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web._Default" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="Scripts/jquery.backstretch.min.js"></script>
     <link href="Content/boostrap1.css" rel="stylesheet" type="text/css" />
@@ -17,10 +18,12 @@
         <div class="jumbotron-inner">
             <div class="buscador" style="height: 272px">
                 <h2><%: Title %> - Turismo</h2>
-                <form>
-                    <input type="text" value="Buscar Ciudad..." onfocus="if (this.value == 'Buscar Ciudad...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar Ciudad...';}" />
-                    <input type="button" value="Ir" />
-                </form>
+                <div class="form_buscador">
+                    <input class="item" id="search_field" type="text" value="Buscar Ciudad..." onfocus="if (this.value == 'Buscar Ciudad...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar Ciudad...';}"/>
+                    <button class="item" id="search_button" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
