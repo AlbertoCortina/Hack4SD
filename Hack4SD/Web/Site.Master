@@ -15,7 +15,6 @@
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
 </head>
 <body>
     <form runat="server">
@@ -77,7 +76,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - #Hack4SD</p>
+                <p style="color:black;">&copy; <%: DateTime.Now.Year %> - #Hack4SD</p>
             </footer>
         </div>
 
