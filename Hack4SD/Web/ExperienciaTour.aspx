@@ -20,42 +20,39 @@
                     <a href="Default.aspx" data-bf="" data-af="">Escalada</a>
                 </section>
             </a>
-
-            <div class="col-xs-6 col-md-3">
-                <a href="Default.aspx" class="thumbnail">
-                    <h1></h1>
-                    <section class="head" id="piraguismo">
-                        <a href="Default.aspx" data-bf="" data-af="">piragüismo</a>
-                    </section>
-                </a>
-            </div>
-            <div class="col-xs-6 col-md-3">
-                <a href="Default.aspx" class="thumbnail">
-                    <h1></h1>
-                    <section class="head" id="monumentos">
-                        <a href="Default.aspx" data-bf="" data-af="">Monumentos</a>
-                    </section>
-                </a>
-            </div>
-            <div class="col-xs-6 col-md-3">
-                <a href="Default.aspx" class="thumbnail">
-                    <h1></h1>
-                    <section class="head" id="gastronomia">
-                        <a href="Default.aspx" data-bf="" data-af="">Gastronomía</a>
-                    </section>
-                </a>
-                <div class="col-xs-6 col-md-3">
-                    <a href="Default.aspx" class="thumbnail">
-                        <h1></h1>
-                        <section class="head" id="eventos">
-                            <a href="Default.aspx" data-bf="" data-af="">Eventos Locales</a>
-                        </section>
-                    </a>
-
-                </div>
-            </div>
-
-
-
         </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="Default.aspx" class="thumbnail">
+                <h1></h1>
+                <section class="head" id="piraguismo">
+                    <a href="Default.aspx" data-bf="" data-af="">piragüismo</a>
+                </section>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="Default.aspx" class="thumbnail">
+                <h1></h1>
+                <section class="head" id="monumentos">
+                    <a href="Default.aspx" data-bf="" data-af="">Monumentos</a>
+                </section>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a href="Default.aspx" class="thumbnail">
+                <h1></h1>
+                <section class="head" id="gastronomia">
+                    <a href="Default.aspx" data-bf="" data-af="">Gastronomía</a>
+                </section>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+                <a href="Default.aspx" class="thumbnail">
+                    <h1></h1>
+                    <section class="head" id="eventos">
+                        <a href="Default.aspx" data-bf="" data-af="">Eventos Locales</a>
+                    </section>
+                </a>
+
+            </div>
+    </div>
 </asp:Content>
