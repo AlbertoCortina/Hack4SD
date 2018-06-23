@@ -135,11 +135,11 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="Css\bootstrap-theme.css" />
-    <Content Include="Css\bootstrap-theme.min.css" />
-    <Content Include="Css\bootstrap.css" />
-    <Content Include="Css\bootstrap.min.css" />
-    <Content Include="Css\Site.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -148,10 +148,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Css\bootstrap.min.css.map" />
-    <Content Include="Css\bootstrap.css.map" />
-    <Content Include="Css\bootstrap-theme.min.css.map" />
-    <Content Include="Css\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -195,6 +195,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Global.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_LocalResources\About.aspx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>About.aspx.resx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -247,7 +252,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_LocalResources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -270,6 +274,12 @@
     <Content Include="App_GlobalResources\Global.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Global.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\About.aspx.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>About.aspx.Designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <PropertyGroup>

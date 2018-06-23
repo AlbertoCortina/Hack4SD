@@ -7,11 +7,13 @@
         One Microsoft Way<br />
         Redmond, WA 98052-6399<br />
         <abbr title="Phone">P:</abbr>
-        425.555.0100
+        +34 610 884 048
     </address>
+    <p>
 
+    </p>
     <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        <strong>Support:</strong>   <a href="mailto:uo244924@uniovi.com">uo244924@uniovi.com</a><br />
+        <strong>Marketing:</strong> <a href="mailto:uo245494@uniovi.com">uo245494@uniovi.com</a>
     </address>
 </asp:Content>
