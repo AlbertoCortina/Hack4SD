@@ -13,12 +13,11 @@ namespace Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataBaseContext : DbContext
+    public partial class DatabaseModelContainer : DbContext
     {
-        public DataBaseContext()
-            : base("name=DataBaseContext")
+        public DatabaseModelContainer()
+            : base("name=DatabaseModelContainer")
         {
-            Database.SetInitializer(new DatabaseInitializer());
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -27,6 +26,8 @@ namespace Model
         }
     
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Car> CarSet { get; set; }
+        public virtual DbSet<Valoracion> Valoraciones { get; set; }
+        public virtual DbSet<Experiencia> Experiencias { get; set; }
+        public virtual DbSet<CampaniaVoluntario> CampaniaVoluntarios { get; set; }
     }
 }

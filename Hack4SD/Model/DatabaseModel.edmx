@@ -7,10 +7,20 @@
     <Schema Namespace="DatabaseModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="DatabaseModelStoreContainer">
     <EntitySet Name="Users" EntityType="DatabaseModel.Store.Users" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CarSet" EntityType="DatabaseModel.Store.CarSet" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="UserCar" Association="DatabaseModel.Store.UserCar">
+    <EntitySet Name="Valoraciones" EntityType="DatabaseModel.Store.Valoraciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Experiencias" EntityType="DatabaseModel.Store.Experiencias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CampaniaVoluntarios" EntityType="DatabaseModel.Store.CampaniaVoluntarios" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserValoracion" Association="DatabaseModel.Store.UserValoracion">
       <End Role="User" EntitySet="Users" />
-      <End Role="Car" EntitySet="CarSet" />
+      <End Role="Valoracion" EntitySet="Valoraciones" />
+    </AssociationSet>
+    <AssociationSet Name="ExperienciaValoracion" Association="DatabaseModel.Store.ExperienciaValoracion">
+      <End Role="Experiencia" EntitySet="Experiencias" />
+      <End Role="Valoracion" EntitySet="Valoraciones" />
+    </AssociationSet>
+    <AssociationSet Name="ExperienciaCampaniaVoluntario" Association="DatabaseModel.Store.ExperienciaCampaniaVoluntario">
+      <End Role="Experiencia" EntitySet="Experiencias" />
+      <End Role="CampaniaVoluntario" EntitySet="CampaniaVoluntarios" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Users">
@@ -20,23 +30,73 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Username" Type="longtext" Nullable="false" />
   </EntityType>
-  <EntityType Name="CarSet">
+  <EntityType Name="Valoraciones">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Matricula" Type="longtext" Nullable="false" />
+    <Property Name="Titulo" Type="longtext" Nullable="false" />
+    <Property Name="Comentario" Type="longtext" Nullable="false" />
+    <Property Name="Url" Type="longtext" Nullable="false" />
+    <Property Name="Puntuacion" Type="longtext" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ExperienciaId" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="UserCar">
+  <EntityType Name="Experiencias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="longtext" Nullable="false" />
+    <Property Name="Descripcion" Type="longtext" Nullable="false" />
+    <Property Name="Url" Type="longtext" Nullable="false" />
+    <Property Name="Ciudad" Type="longtext" Nullable="false" />
+    <Property Name="Categoria" Type="longtext" Nullable="false" />
+    <Property Name="PuntuacionMedia" Type="longtext" Nullable="false" />
+    <Property Name="Buenas_practicas" Type="longtext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CampaniaVoluntarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="longtext" Nullable="false" />
+    <Property Name="Descripcion" Type="longtext" Nullable="false" />
+    <Property Name="ExperienciaId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UserValoracion">
     <End Role="User" Type="DatabaseModel.Store.Users" Multiplicity="1" />
-    <End Role="Car" Type="DatabaseModel.Store.CarSet" Multiplicity="*" />
+    <End Role="Valoracion" Type="DatabaseModel.Store.Valoraciones" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Car">
+      <Dependent Role="Valoracion">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExperienciaValoracion">
+    <End Role="Experiencia" Type="DatabaseModel.Store.Experiencias" Multiplicity="1" />
+    <End Role="Valoracion" Type="DatabaseModel.Store.Valoraciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Experiencia">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Valoracion">
+        <PropertyRef Name="ExperienciaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExperienciaCampaniaVoluntario">
+    <End Role="Experiencia" Type="DatabaseModel.Store.Experiencias" Multiplicity="1" />
+    <End Role="CampaniaVoluntario" Type="DatabaseModel.Store.CampaniaVoluntarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Experiencia">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CampaniaVoluntario">
+        <PropertyRef Name="ExperienciaId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -46,10 +106,20 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="DatabaseModelContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="DatabaseModel.User" />
-          <EntitySet Name="CarSet" EntityType="DatabaseModel.Car" />
-          <AssociationSet Name="UserCar" Association="DatabaseModel.UserCar">
+          <EntitySet Name="Valoraciones" EntityType="DatabaseModel.Valoracion" />
+          <AssociationSet Name="UserValoracion" Association="DatabaseModel.UserValoracion">
             <End Role="User" EntitySet="Users" />
-            <End Role="Car" EntitySet="CarSet" />
+            <End Role="Valoracion" EntitySet="Valoraciones" />
+          </AssociationSet>
+          <EntitySet Name="Experiencias" EntityType="DatabaseModel.Experiencia" />
+          <AssociationSet Name="ExperienciaValoracion" Association="DatabaseModel.ExperienciaValoracion">
+            <End Role="Experiencia" EntitySet="Experiencias" />
+            <End Role="Valoracion" EntitySet="Valoraciones" />
+          </AssociationSet>
+          <EntitySet Name="CampaniaVoluntarios" EntityType="DatabaseModel.CampaniaVoluntario" />
+          <AssociationSet Name="ExperienciaCampaniaVoluntario" Association="DatabaseModel.ExperienciaCampaniaVoluntario">
+            <End Role="Experiencia" EntitySet="Experiencias" />
+            <End Role="CampaniaVoluntario" EntitySet="CampaniaVoluntarios" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="User">
@@ -58,26 +128,80 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Username" Type="String" Nullable="false" />
-          <NavigationProperty Name="Cars" Relationship="DatabaseModel.UserCar" FromRole="User" ToRole="Car" />
+          <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.UserValoracion" FromRole="User" ToRole="Valoracion" />
         </EntityType>
-        <EntityType Name="Car">
+        <EntityType Name="Valoracion">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Matricula" Type="String" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="DatabaseModel.UserCar" FromRole="Car" ToRole="User" />
+          <Property Name="Titulo" Type="String" Nullable="false" />
+          <Property Name="Comentario" Type="String" Nullable="false" />
+          <Property Name="Url" Type="String" Nullable="false" />
+          <Property Name="Puntuacion" Type="String" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="DatabaseModel.UserValoracion" FromRole="Valoracion" ToRole="User" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Experiencia" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Valoracion" ToRole="Experiencia" />
+          <Property Name="ExperienciaId" Type="Int32" Nullable="false" />
         </EntityType>
-        <Association Name="UserCar">
+        <Association Name="UserValoracion">
           <End Type="DatabaseModel.User" Role="User" Multiplicity="1" />
-          <End Type="DatabaseModel.Car" Role="Car" Multiplicity="*" />
+          <End Type="DatabaseModel.Valoracion" Role="Valoracion" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Car">
+            <Dependent Role="Valoracion">
               <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Experiencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <Property Name="Url" Type="String" Nullable="false" />
+          <Property Name="Ciudad" Type="String" Nullable="false" />
+          <Property Name="Categoria" Type="String" Nullable="false" />
+          <Property Name="PuntuacionMedia" Type="String" Nullable="false" />
+          <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Experiencia" ToRole="Valoracion" />
+          <NavigationProperty Name="CampaniaVoluntario" Relationship="DatabaseModel.ExperienciaCampaniaVoluntario" FromRole="Experiencia" ToRole="CampaniaVoluntario" />
+          <Property Name="Buenas_practicas" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="ExperienciaValoracion">
+          <End Type="DatabaseModel.Experiencia" Role="Experiencia" Multiplicity="1" />
+          <End Type="DatabaseModel.Valoracion" Role="Valoracion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Experiencia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Valoracion">
+              <PropertyRef Name="ExperienciaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CampaniaVoluntario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="Experiencia" Relationship="DatabaseModel.ExperienciaCampaniaVoluntario" FromRole="CampaniaVoluntario" ToRole="Experiencia" />
+          <Property Name="ExperienciaId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="ExperienciaCampaniaVoluntario">
+          <End Type="DatabaseModel.Experiencia" Role="Experiencia" Multiplicity="1" />
+          <End Type="DatabaseModel.CampaniaVoluntario" Role="CampaniaVoluntario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Experiencia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CampaniaVoluntario">
+              <PropertyRef Name="ExperienciaId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -95,12 +219,40 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CarSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.Car)">
-        <MappingFragment StoreEntitySet="CarSet">
+    <EntitySetMapping Name="Valoraciones">
+      <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.Valoracion)">
+        <MappingFragment StoreEntitySet="Valoraciones">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Puntuacion" ColumnName="Puntuacion" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ExperienciaId" ColumnName="ExperienciaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Experiencias">
+      <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.Experiencia)">
+        <MappingFragment StoreEntitySet="Experiencias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="PuntuacionMedia" ColumnName="PuntuacionMedia" />
+          <ScalarProperty Name="Buenas_practicas" ColumnName="Buenas_practicas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaniaVoluntarios">
+      <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.CampaniaVoluntario)">
+        <MappingFragment StoreEntitySet="CampaniaVoluntarios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ExperienciaId" ColumnName="ExperienciaId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

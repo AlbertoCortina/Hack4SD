@@ -12,18 +12,13 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class CampaniaVoluntario
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
-        {
-            this.Valoraciones = new HashSet<Valoracion>();
-        }
-    
         public int Id { get; set; }
-        public string Username { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public int ExperienciaId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Valoracion> Valoraciones { get; set; }
+        public virtual Experiencia Experiencia { get; set; }
     }
 }
