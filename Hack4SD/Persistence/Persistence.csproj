@@ -41,9 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementations\IPersistenceImpl.cs" />
+    <Compile Include="Implementations\IUserPersistenceImpl.cs" />
+    <Compile Include="Implementations\IValoracionPersistenceImpl.cs" />
+    <Compile Include="Interfaces\IUserPersistence.cs" />
     <Compile Include="Interfaces\IPersistence.cs" />
+    <Compile Include="Interfaces\IValoracionPersistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{25d539bc-7ee7-4c71-83f3-fe39ed25be97}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -49,7 +49,6 @@
     <Property Name="Comentario" Type="longtext" Nullable="false" />
     <Property Name="Url" Type="longtext" Nullable="false" />
     <Property Name="Puntuacion" Type="longtext" Nullable="false" />
-    <Property Name="ValoracionMedia" Type="longtext" Nullable="false" />
     <Property Name="ExperienciaId" Type="int" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>
@@ -63,6 +62,7 @@
     <Property Name="Contenido" Type="longtext" Nullable="false" />
     <Property Name="Categoria" Type="longtext" Nullable="false" />
     <Property Name="Ciudad" Type="longtext" Nullable="false" />
+    <Property Name="ValoracionMedia" Type="longtext" Nullable="false" />
   </EntityType>
   <EntityType Name="Campañas">
     <Key>
@@ -183,7 +183,7 @@
           <Property Name="Rol" Type="String" Nullable="false" />
           <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.UserValoracion" FromRole="User" ToRole="Valoracion" />
           <NavigationProperty Name="Campañas" Relationship="DatabaseModel.UserCampaña" FromRole="User" ToRole="Campaña" />
-          <NavigationProperty Name="IdeaSostenibles" Relationship="DatabaseModel.UserIdeaSostenible" FromRole="User" ToRole="IdeaSostenible" />
+          <NavigationProperty Name="IdeasSostenibles" Relationship="DatabaseModel.UserIdeaSostenible" FromRole="User" ToRole="IdeaSostenible" />
         </EntityType>
         <EntityType Name="Valoracion">
           <Key>
@@ -194,7 +194,6 @@
           <Property Name="Comentario" Type="String" Nullable="false" />
           <Property Name="Url" Type="String" Nullable="false" />
           <Property Name="Puntuacion" Type="String" Nullable="false" />
-          <Property Name="ValoracionMedia" Type="String" Nullable="false" />
           <NavigationProperty Name="Experiencia" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Valoracion" ToRole="Experiencia" />
           <Property Name="ExperienciaId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="User" Relationship="DatabaseModel.UserValoracion" FromRole="Valoracion" ToRole="User" />
@@ -212,6 +211,7 @@
           <Property Name="Ciudad" Type="String" Nullable="false" />
           <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Experiencia" ToRole="Valoracion" />
           <NavigationProperty Name="Campañas" Relationship="DatabaseModel.ExperienciaCampaña" FromRole="Experiencia" ToRole="Campaña" />
+          <Property Name="ValoracionMedia" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Campaña">
           <Key>
@@ -318,7 +318,6 @@
           <ScalarProperty Name="Comentario" ColumnName="Comentario" />
           <ScalarProperty Name="Url" ColumnName="Url" />
           <ScalarProperty Name="Puntuacion" ColumnName="Puntuacion" />
-          <ScalarProperty Name="ValoracionMedia" ColumnName="ValoracionMedia" />
           <ScalarProperty Name="ExperienciaId" ColumnName="ExperienciaId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
@@ -333,6 +332,7 @@
           <ScalarProperty Name="Contenido" ColumnName="Contenido" />
           <ScalarProperty Name="Categoria" ColumnName="Categoria" />
           <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="ValoracionMedia" ColumnName="ValoracionMedia" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -44,7 +44,7 @@
 -- -----------------------------------------------------------
 -- Entity Designer DDL Script for MySQL Server 4.1 and higher
 -- -----------------------------------------------------------
--- Date Created: 06/23/2018 20:29:39
+-- Date Created: 06/24/2018 00:06:48
 
 -- Generated from EDMX file: C:\Users\Alberto Cortina\Documents\GitHub\Hack4SD2\Hack4SD\Model\DatabaseModel.edmx
 -- Target version: 3.0.0.0
@@ -109,7 +109,6 @@ CREATE TABLE `Valoraciones`(
 	`Comentario` longtext NOT NULL, 
 	`Url` longtext NOT NULL, 
 	`Puntuacion` longtext NOT NULL, 
-	`ValoracionMedia` longtext NOT NULL, 
 	`ExperienciaId` int NOT NULL, 
 	`UserId` int NOT NULL);
 
@@ -125,7 +124,8 @@ CREATE TABLE `Experiencias`(
 	`Descripcion` longtext NOT NULL, 
 	`Contenido` longtext NOT NULL, 
 	`Categoria` longtext NOT NULL, 
-	`Ciudad` longtext NOT NULL);
+	`Ciudad` longtext NOT NULL, 
+	`ValoracionMedia` longtext NOT NULL);
 
 ALTER TABLE `Experiencias` ADD PRIMARY KEY (`Id`);
 

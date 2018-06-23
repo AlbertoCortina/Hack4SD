@@ -133,6 +133,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="General.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Mejoras.css" />
@@ -212,6 +213,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General.aspx.cs">
+      <DependentUpon>General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General.aspx.designer.cs">
+      <DependentUpon>General.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\Global.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -301,12 +309,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Configuration\Configuration.csproj">
-      <Project>{eaae7adc-42e0-407d-bf16-e5504c73a32e}</Project>
-      <Name>Configuration</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Global.resx">

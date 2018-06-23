@@ -81,6 +81,8 @@
     <Compile Include="IdeaSostenible.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model2.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>

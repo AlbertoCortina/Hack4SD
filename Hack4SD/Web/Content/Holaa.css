@@ -14,6 +14,29 @@ body {
     background-color: #465154 antiquewhite;
 }
 
+#cajon1 {
+    float: left;
+    background: #CC6600;
+    position:absolute;
+}
+
+#cajon2 {
+    float: left;
+    background: #000FFF;
+    position: absolute;
+}
+
+Ahora, para diferenciarlo, vamos a colocarle colores a cada cajón:
+#cajon1 {
+    float: left;
+    background: #CC6600;
+}
+
+#cajon2 {
+    float: left;
+    background: #000FFF;
+}
+
 section {
     height: 350px;
     width: 94%;
@@ -63,9 +86,11 @@ section {
 #piraguismo {
     background-image: url(https://guiafitness.com/wp-content/uploads/piraguismo-para-principiantes.jpg);
 }
+
 #monumentos {
     background-image: url(http://www.bestfon.info/images/joomgallery/originals/3d_3/monumentos_bajo_el_agua_20150213_1184858189.jpg);
 }
+
 #eventos {
     background-image: url(https://www.viajejet.com/wp-content/viajes/espectaculo-de-fuegos-artificiales-en-el-rin.jpg);
 }
