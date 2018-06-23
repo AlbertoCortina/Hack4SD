@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="City.cs" />
     <Compile Include="Country.cs" />
+    <Compile Include="Databaseinitializer.cs" />
     <Compile Include="DatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
