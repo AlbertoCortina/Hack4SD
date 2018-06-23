@@ -156,6 +156,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Img\alberto.jpeg" />
+    <Content Include="Img\Laura.jpg" />
+    <Content Include="Img\miguel.jpg" />
+    <Content Include="Img\miguelbuena.jpeg" />
+    <Content Include="Img\playaSilencio.jpg" />
+    <Content Include="Img\playaXago.jpg" />
+    <Content Include="Img\victor.jpeg" />
+    <Content Include="Img\victorbuena.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
