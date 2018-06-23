@@ -104,6 +104,7 @@
       <DependentUpon>DatabaseModel.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\Agregar datos seed.txt" />
+    <Content Include="Scripts\CódigoDBInitializer.txt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
