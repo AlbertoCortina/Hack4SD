@@ -4344,7 +4344,6 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4356,7 +4355,10 @@ input[type="button"].btn-block {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
     .navbar > .container,

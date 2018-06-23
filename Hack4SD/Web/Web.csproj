@@ -139,7 +139,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Hola.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Experiencia.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -165,6 +167,7 @@
     <Content Include="Img\playaXago.jpg" />
     <Content Include="Img\About\victor.jpeg" />
     <Content Include="Img\About\victorbuena.jpeg" />
+    <Content Include="Img\senderismo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -225,6 +228,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Experiencia.aspx.cs">
+      <DependentUpon>Experiencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Experiencia.aspx.designer.cs">
+      <DependentUpon>Experiencia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
