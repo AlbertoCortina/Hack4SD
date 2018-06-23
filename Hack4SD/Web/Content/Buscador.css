@@ -18,38 +18,37 @@ textarea {
     max-width: 1000px;
 }
 
+h2{
+    top:200px;
+    font-size: 72px;
+    color:black;
+    text-align:center;
+}
+
+.buscador{
+    margin-top:180px;
+}
+
 #Buscador{
     background-color:white;
-    height:30px;
+    height:50px;
     width:800px;
     align-items: center;
 }
 
 #Submit{
     background-color:white;
-    background:url("/Img/lupa.jpg");
-    background-repeat:no-repeat;
+    background:url('/Img/lupa.jpg') no-repeat;
     background-size: 20px, 20px;
-    
     padding-left:30px;
-}
-
-div .jumbotron{
-    position:absolute;
-    top:0;
-    right:0;
-    left:0;
-    bottom:0;
-    resize:absolut;
-    background-repeat:no-repeat;
+    width: 188px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
-        background-image: url("/Img/playaXago.jpg");
-        background-color:white;
-        align-items:center;
+        background: inherit;
+        align-items: center;
         margin-top: 0px;
     }
 
