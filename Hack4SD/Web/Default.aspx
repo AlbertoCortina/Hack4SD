@@ -11,6 +11,8 @@
 
     <div class="row">
         <%-- Aqui insertamos el mapa --%>
+        <p>Hello</p>
+        <p>Can you hear me?</p>
     </div>
 
 

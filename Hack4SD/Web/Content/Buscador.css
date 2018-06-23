@@ -25,8 +25,12 @@ textarea {
 }
 
 #Submit{
-    background:url(Img/lupa.jpg);
+    background:url("Img/lupa.jpg");
     padding-left:30px;
+}
+
+.row {
+    background-image: url(Img/playaXago.jpg);
 }
 
 /* Responsive: Portrait tablets and up */
