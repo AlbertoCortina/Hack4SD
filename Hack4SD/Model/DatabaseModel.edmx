@@ -9,18 +9,27 @@
     <EntitySet Name="Users" EntityType="DatabaseModel.Store.Users" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Valoraciones" EntityType="DatabaseModel.Store.Valoraciones" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Experiencias" EntityType="DatabaseModel.Store.Experiencias" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CampaniaVoluntarios" EntityType="DatabaseModel.Store.CampaniaVoluntarios" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="UserValoracion" Association="DatabaseModel.Store.UserValoracion">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Valoracion" EntitySet="Valoraciones" />
-    </AssociationSet>
+    <EntitySet Name="Campañas" EntityType="DatabaseModel.Store.Campañas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IdeaSostenibles" EntityType="DatabaseModel.Store.IdeaSostenibles" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="ExperienciaValoracion" Association="DatabaseModel.Store.ExperienciaValoracion">
       <End Role="Experiencia" EntitySet="Experiencias" />
       <End Role="Valoracion" EntitySet="Valoraciones" />
     </AssociationSet>
-    <AssociationSet Name="ExperienciaCampaniaVoluntario" Association="DatabaseModel.Store.ExperienciaCampaniaVoluntario">
+    <AssociationSet Name="ExperienciaCampaña" Association="DatabaseModel.Store.ExperienciaCampaña">
       <End Role="Experiencia" EntitySet="Experiencias" />
-      <End Role="CampaniaVoluntario" EntitySet="CampaniaVoluntarios" />
+      <End Role="Campaña" EntitySet="Campañas" />
+    </AssociationSet>
+    <AssociationSet Name="UserValoracion" Association="DatabaseModel.Store.UserValoracion">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Valoracion" EntitySet="Valoraciones" />
+    </AssociationSet>
+    <AssociationSet Name="UserCampaña" Association="DatabaseModel.Store.UserCampaña">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Campaña" EntitySet="Campañas" />
+    </AssociationSet>
+    <AssociationSet Name="UserIdeaSostenible" Association="DatabaseModel.Store.UserIdeaSostenible">
+      <End Role="User" EntitySet="Users" />
+      <End Role="IdeaSostenible" EntitySet="IdeaSostenibles" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Users">
@@ -28,7 +37,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Username" Type="longtext" Nullable="false" />
+    <Property Name="UserName" Type="longtext" Nullable="false" />
+    <Property Name="Rol" Type="longtext" Nullable="false" />
   </EntityType>
   <EntityType Name="Valoraciones">
     <Key>
@@ -39,43 +49,40 @@
     <Property Name="Comentario" Type="longtext" Nullable="false" />
     <Property Name="Url" Type="longtext" Nullable="false" />
     <Property Name="Puntuacion" Type="longtext" Nullable="false" />
-    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ValoracionMedia" Type="longtext" Nullable="false" />
     <Property Name="ExperienciaId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Experiencias">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="longtext" Nullable="false" />
+    <Property Name="Titulo" Type="longtext" Nullable="false" />
     <Property Name="Descripcion" Type="longtext" Nullable="false" />
-    <Property Name="Url" Type="longtext" Nullable="false" />
-    <Property Name="Ciudad" Type="longtext" Nullable="false" />
+    <Property Name="Contenido" Type="longtext" Nullable="false" />
     <Property Name="Categoria" Type="longtext" Nullable="false" />
-    <Property Name="PuntuacionMedia" Type="longtext" Nullable="false" />
-    <Property Name="Buenas_practicas" Type="longtext" Nullable="false" />
+    <Property Name="Ciudad" Type="longtext" Nullable="false" />
   </EntityType>
-  <EntityType Name="CampaniaVoluntarios">
+  <EntityType Name="Campañas">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="longtext" Nullable="false" />
+    <Property Name="Titulo" Type="longtext" Nullable="false" />
     <Property Name="Descripcion" Type="longtext" Nullable="false" />
     <Property Name="ExperienciaId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="UserValoracion">
-    <End Role="User" Type="DatabaseModel.Store.Users" Multiplicity="1" />
-    <End Role="Valoracion" Type="DatabaseModel.Store.Valoraciones" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Valoracion">
-        <PropertyRef Name="UserId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
+  <EntityType Name="IdeaSostenibles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="longtext" Nullable="false" />
+    <Property Name="Descripcion" Type="longtext" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
   <Association Name="ExperienciaValoracion">
     <End Role="Experiencia" Type="DatabaseModel.Store.Experiencias" Multiplicity="1" />
     <End Role="Valoracion" Type="DatabaseModel.Store.Valoraciones" Multiplicity="*" />
@@ -88,15 +95,51 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ExperienciaCampaniaVoluntario">
+  <Association Name="ExperienciaCampaña">
     <End Role="Experiencia" Type="DatabaseModel.Store.Experiencias" Multiplicity="1" />
-    <End Role="CampaniaVoluntario" Type="DatabaseModel.Store.CampaniaVoluntarios" Multiplicity="*" />
+    <End Role="Campaña" Type="DatabaseModel.Store.Campañas" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Experiencia">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="CampaniaVoluntario">
+      <Dependent Role="Campaña">
         <PropertyRef Name="ExperienciaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserValoracion">
+    <End Role="User" Type="DatabaseModel.Store.Users" Multiplicity="1" />
+    <End Role="Valoracion" Type="DatabaseModel.Store.Valoraciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Valoracion">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserCampaña">
+    <End Role="User" Type="DatabaseModel.Store.Users" Multiplicity="1" />
+    <End Role="Campaña" Type="DatabaseModel.Store.Campañas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Campaña">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserIdeaSostenible">
+    <End Role="User" Type="DatabaseModel.Store.Users" Multiplicity="1" />
+    <End Role="IdeaSostenible" Type="DatabaseModel.Store.IdeaSostenibles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IdeaSostenible">
+        <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -107,19 +150,28 @@
         <EntityContainer Name="DatabaseModelContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="DatabaseModel.User" />
           <EntitySet Name="Valoraciones" EntityType="DatabaseModel.Valoracion" />
-          <AssociationSet Name="UserValoracion" Association="DatabaseModel.UserValoracion">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Valoracion" EntitySet="Valoraciones" />
-          </AssociationSet>
           <EntitySet Name="Experiencias" EntityType="DatabaseModel.Experiencia" />
+          <EntitySet Name="Campañas" EntityType="DatabaseModel.Campaña" />
+          <EntitySet Name="IdeaSostenibles" EntityType="DatabaseModel.IdeaSostenible" />
           <AssociationSet Name="ExperienciaValoracion" Association="DatabaseModel.ExperienciaValoracion">
             <End Role="Experiencia" EntitySet="Experiencias" />
             <End Role="Valoracion" EntitySet="Valoraciones" />
           </AssociationSet>
-          <EntitySet Name="CampaniaVoluntarios" EntityType="DatabaseModel.CampaniaVoluntario" />
-          <AssociationSet Name="ExperienciaCampaniaVoluntario" Association="DatabaseModel.ExperienciaCampaniaVoluntario">
+          <AssociationSet Name="ExperienciaCampaña" Association="DatabaseModel.ExperienciaCampaña">
             <End Role="Experiencia" EntitySet="Experiencias" />
-            <End Role="CampaniaVoluntario" EntitySet="CampaniaVoluntarios" />
+            <End Role="Campaña" EntitySet="Campañas" />
+          </AssociationSet>
+          <AssociationSet Name="UserValoracion" Association="DatabaseModel.UserValoracion">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Valoracion" EntitySet="Valoraciones" />
+          </AssociationSet>
+          <AssociationSet Name="UserCampaña" Association="DatabaseModel.UserCampaña">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Campaña" EntitySet="Campañas" />
+          </AssociationSet>
+          <AssociationSet Name="UserIdeaSostenible" Association="DatabaseModel.UserIdeaSostenible">
+            <End Role="User" EntitySet="Users" />
+            <End Role="IdeaSostenible" EntitySet="IdeaSostenibles" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="User">
@@ -127,8 +179,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Username" Type="String" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" />
+          <Property Name="Rol" Type="String" Nullable="false" />
           <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.UserValoracion" FromRole="User" ToRole="Valoracion" />
+          <NavigationProperty Name="Campañas" Relationship="DatabaseModel.UserCampaña" FromRole="User" ToRole="Campaña" />
+          <NavigationProperty Name="IdeaSostenibles" Relationship="DatabaseModel.UserIdeaSostenible" FromRole="User" ToRole="IdeaSostenible" />
         </EntityType>
         <EntityType Name="Valoracion">
           <Key>
@@ -139,37 +194,46 @@
           <Property Name="Comentario" Type="String" Nullable="false" />
           <Property Name="Url" Type="String" Nullable="false" />
           <Property Name="Puntuacion" Type="String" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="DatabaseModel.UserValoracion" FromRole="Valoracion" ToRole="User" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="ValoracionMedia" Type="String" Nullable="false" />
           <NavigationProperty Name="Experiencia" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Valoracion" ToRole="Experiencia" />
           <Property Name="ExperienciaId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="DatabaseModel.UserValoracion" FromRole="Valoracion" ToRole="User" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
         </EntityType>
-        <Association Name="UserValoracion">
-          <End Type="DatabaseModel.User" Role="User" Multiplicity="1" />
-          <End Type="DatabaseModel.Valoracion" Role="Valoracion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Valoracion">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="Experiencia">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="Titulo" Type="String" Nullable="false" />
           <Property Name="Descripcion" Type="String" Nullable="false" />
-          <Property Name="Url" Type="String" Nullable="false" />
-          <Property Name="Ciudad" Type="String" Nullable="false" />
+          <Property Name="Contenido" Type="String" Nullable="false" />
           <Property Name="Categoria" Type="String" Nullable="false" />
-          <Property Name="PuntuacionMedia" Type="String" Nullable="false" />
+          <Property Name="Ciudad" Type="String" Nullable="false" />
           <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Experiencia" ToRole="Valoracion" />
-          <NavigationProperty Name="CampaniaVoluntario" Relationship="DatabaseModel.ExperienciaCampaniaVoluntario" FromRole="Experiencia" ToRole="CampaniaVoluntario" />
-          <Property Name="Buenas_practicas" Type="String" Nullable="false" />
+          <NavigationProperty Name="Campañas" Relationship="DatabaseModel.ExperienciaCampaña" FromRole="Experiencia" ToRole="Campaña" />
+        </EntityType>
+        <EntityType Name="Campaña">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Titulo" Type="String" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="Experiencia" Relationship="DatabaseModel.ExperienciaCampaña" FromRole="Campaña" ToRole="Experiencia" />
+          <Property Name="ExperienciaId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="DatabaseModel.UserCampaña" FromRole="Campaña" ToRole="User" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IdeaSostenible">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Titulo" Type="String" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="DatabaseModel.UserIdeaSostenible" FromRole="IdeaSostenible" ToRole="User" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="ExperienciaValoracion">
           <End Type="DatabaseModel.Experiencia" Role="Experiencia" Multiplicity="1" />
@@ -183,25 +247,51 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="CampaniaVoluntario">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" Nullable="false" />
-          <Property Name="Descripcion" Type="String" Nullable="false" />
-          <NavigationProperty Name="Experiencia" Relationship="DatabaseModel.ExperienciaCampaniaVoluntario" FromRole="CampaniaVoluntario" ToRole="Experiencia" />
-          <Property Name="ExperienciaId" Type="Int32" Nullable="false" />
-        </EntityType>
-        <Association Name="ExperienciaCampaniaVoluntario">
+        <Association Name="ExperienciaCampaña">
           <End Type="DatabaseModel.Experiencia" Role="Experiencia" Multiplicity="1" />
-          <End Type="DatabaseModel.CampaniaVoluntario" Role="CampaniaVoluntario" Multiplicity="*" />
+          <End Type="DatabaseModel.Campaña" Role="Campaña" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Experiencia">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="CampaniaVoluntario">
+            <Dependent Role="Campaña">
               <PropertyRef Name="ExperienciaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserValoracion">
+          <End Type="DatabaseModel.User" Role="User" Multiplicity="1" />
+          <End Type="DatabaseModel.Valoracion" Role="Valoracion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Valoracion">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserCampaña">
+          <End Type="DatabaseModel.User" Role="User" Multiplicity="1" />
+          <End Type="DatabaseModel.Campaña" Role="Campaña" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Campaña">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserIdeaSostenible">
+          <End Type="DatabaseModel.User" Role="User" Multiplicity="1" />
+          <End Type="DatabaseModel.IdeaSostenible" Role="IdeaSostenible" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IdeaSostenible">
+              <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -215,7 +305,8 @@
       <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.User)">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -227,8 +318,9 @@
           <ScalarProperty Name="Comentario" ColumnName="Comentario" />
           <ScalarProperty Name="Url" ColumnName="Url" />
           <ScalarProperty Name="Puntuacion" ColumnName="Puntuacion" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ValoracionMedia" ColumnName="ValoracionMedia" />
           <ScalarProperty Name="ExperienciaId" ColumnName="ExperienciaId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -236,23 +328,32 @@
       <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.Experiencia)">
         <MappingFragment StoreEntitySet="Experiencias">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="Url" ColumnName="Url" />
-          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
           <ScalarProperty Name="Categoria" ColumnName="Categoria" />
-          <ScalarProperty Name="PuntuacionMedia" ColumnName="PuntuacionMedia" />
-          <ScalarProperty Name="Buenas_practicas" ColumnName="Buenas_practicas" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CampaniaVoluntarios">
-      <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.CampaniaVoluntario)">
-        <MappingFragment StoreEntitySet="CampaniaVoluntarios">
+    <EntitySetMapping Name="Campañas">
+      <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.Campaña)">
+        <MappingFragment StoreEntitySet="Campañas">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="ExperienciaId" ColumnName="ExperienciaId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IdeaSostenibles">
+      <EntityTypeMapping TypeName="IsTypeOf(DatabaseModel.IdeaSostenible)">
+        <MappingFragment StoreEntitySet="IdeaSostenibles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

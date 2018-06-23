@@ -18,21 +18,19 @@ namespace Model
         public Experiencia()
         {
             this.Valoraciones = new HashSet<Valoracion>();
-            this.CampaniaVoluntario = new HashSet<CampaniaVoluntario>();
+            this.Campañas = new HashSet<Campaña>();
         }
     
         public int Id { get; set; }
-        public string Nombre { get; set; }
+        public string Titulo { get; set; }
         public string Descripcion { get; set; }
-        public string Url { get; set; }
-        public string Ciudad { get; set; }
+        public string Contenido { get; set; }
         public string Categoria { get; set; }
-        public string PuntuacionMedia { get; set; }
-        public string Buenas_practicas { get; set; }
+        public string Ciudad { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Valoracion> Valoraciones { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CampaniaVoluntario> CampaniaVoluntario { get; set; }
+        public virtual ICollection<Campaña> Campañas { get; set; }
     }
 }

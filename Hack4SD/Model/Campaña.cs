@@ -12,13 +12,15 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class CampaniaVoluntario
+    public partial class Campaña
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
+        public string Titulo { get; set; }
         public string Descripcion { get; set; }
         public int ExperienciaId { get; set; }
+        public int UserId { get; set; }
     
         public virtual Experiencia Experiencia { get; set; }
+        public virtual User User { get; set; }
     }
 }
