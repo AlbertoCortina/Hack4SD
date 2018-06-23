@@ -7,15 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace Web
 {
-    public partial class _Default : Page
+    public partial class ExperienciaTour : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
         }
 
-        public void mostrarSenderismos()
+        protected void Button1_Click(object sender, EventArgs e)
         {
+            Response.Redirect("General.aspx", false);
+        
         }
     }
 }
