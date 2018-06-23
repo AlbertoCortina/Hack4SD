@@ -28,6 +28,7 @@ namespace Model
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Valoracion> Valoraciones { get; set; }
         public virtual DbSet<Experiencia> Experiencias { get; set; }
-        public virtual DbSet<CampaniaVoluntario> CampaniaVoluntarios { get; set; }
+        public virtual DbSet<Campaña> Campañas { get; set; }
+        public virtual DbSet<IdeaSostenible> IdeaSostenibles { get; set; }
     }
 }
