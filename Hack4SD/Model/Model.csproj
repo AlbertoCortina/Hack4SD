@@ -58,6 +58,7 @@
     <Compile Include="CampaniaVoluntario.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="City.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="DatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
