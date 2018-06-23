@@ -11573,7 +11573,11 @@ select.form-control {
     color: inherit;
 }
 
-#Login1 {
-    margin-top:50px;
-    color:red;
+.login {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.username {
 }
