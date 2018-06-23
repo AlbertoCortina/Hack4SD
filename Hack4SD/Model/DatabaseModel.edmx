@@ -183,7 +183,7 @@
           <Property Name="Rol" Type="String" Nullable="false" />
           <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.UserValoracion" FromRole="User" ToRole="Valoracion" />
           <NavigationProperty Name="Campañas" Relationship="DatabaseModel.UserCampaña" FromRole="User" ToRole="Campaña" />
-          <NavigationProperty Name="IdeaSostenibles" Relationship="DatabaseModel.UserIdeaSostenible" FromRole="User" ToRole="IdeaSostenible" />
+          <NavigationProperty Name="IdeasSostenibles" Relationship="DatabaseModel.UserIdeaSostenible" FromRole="User" ToRole="IdeaSostenible" />
         </EntityType>
         <EntityType Name="Valoracion">
           <Key>

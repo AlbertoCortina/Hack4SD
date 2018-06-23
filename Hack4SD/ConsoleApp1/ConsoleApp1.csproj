@@ -67,10 +67,6 @@
       <Project>{979a2dd6-242a-40c3-b78a-b69dfb659e25}</Project>
       <Name>Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Configuration\Configuration.csproj">
-      <Project>{eaae7adc-42e0-407d-bf16-e5504c73a32e}</Project>
-      <Name>Configuration</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{25d539bc-7ee7-4c71-83f3-fe39ed25be97}</Project>
       <Name>Model</Name>

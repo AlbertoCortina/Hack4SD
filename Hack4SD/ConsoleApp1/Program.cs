@@ -1,6 +1,5 @@
-﻿using Business;
-using Model;
-using System.Collections.Generic;
+﻿using Model;
+using Configuration;
 
 namespace ConsoleApp1
 {
@@ -8,9 +7,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            List<City> cities = Factory.getService().getMinubeService().getAllCities("63");
-            List<Country> countries = Factory.getService().getMinubeService().getAllCountries();
-            
+            User user = Factory.getService().getUserService().getUserById(1);
         }
     }
 }
