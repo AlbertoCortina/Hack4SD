@@ -139,6 +139,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Buscador.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -161,6 +162,7 @@
     <Content Include="Img\About\Laura.jpg" />
     <Content Include="Img\About\miguel.jpg" />
     <Content Include="Img\About\miguelbuena.jpeg" />
+    <Content Include="Img\lupa.jpg" />
     <Content Include="Img\playaSilencio.jpg" />
     <Content Include="Img\playaXago.jpg" />
     <Content Include="Img\About\victor.jpeg" />
@@ -204,11 +206,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Global.resx</DependentUpon>
-    </Compile>
-    <Compile Include="App_LocalResources\About.aspx.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>About.aspx.resx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -261,6 +258,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_LocalResources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -283,12 +281,6 @@
     <Content Include="App_GlobalResources\Global.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Global.Designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\About.aspx.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>About.aspx.Designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <PropertyGroup>
