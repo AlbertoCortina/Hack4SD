@@ -76,7 +76,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - #Hack4SD</p>
+                <p style="color:black;">&copy; <%: DateTime.Now.Year %> - #Hack4SD</p>
             </footer>
         </div>
 
