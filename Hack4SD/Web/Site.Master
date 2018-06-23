@@ -39,7 +39,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark" style="z-index: 3">
+        <div class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark" >
             <% // se sobrepone lo que tenga mayor z-index %>
             <a class="navbar-brand" href="/Default.aspx">Turismo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
                         <a class="nav-link" href="/Contact.aspx">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/About.aspx">Abaout</a>
+                        <a class="nav-link" href="/About.aspx">About</a>
                     </li>
                 </ul>
         </div>

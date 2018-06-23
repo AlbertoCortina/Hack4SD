@@ -5,13 +5,12 @@
     <div class="jumbotron">
         <p>
             <input id="Buscador" type="text" />
-            <input id="Submit" type="submit" value="Submit" style="" />
+            <input id="Submit" type="submit" value="Submit"/>
         </p>
     </div>
 
     <div class="row">
         <%-- Aqui insertamos el mapa --%>
-
     </div>
 
 

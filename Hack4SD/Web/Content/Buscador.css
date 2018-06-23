@@ -19,9 +19,14 @@ textarea {
 }
 
 #Buscador{
-    background-color:darkgray;
+    background-color:red;
     height:30px;
     width:800px;
+}
+
+#Submit{
+    background:url(Img/lupa.jpg);
+    padding-left:30px;
 }
 
 /* Responsive: Portrait tablets and up */
