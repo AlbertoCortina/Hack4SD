@@ -18,6 +18,7 @@ namespace ConsoleApp1
                 // Query for the Blog named ADO.NET Blog 
                
                 context.Users.ToList().ForEach(e => Console.WriteLine(e.Username));
+                Console.WriteLine("HOLA");
                 Console.ReadLine();
             }
         }
