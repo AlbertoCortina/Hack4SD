@@ -58,6 +58,7 @@
     <Compile Include="Car.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="City.cs" />
     <Compile Include="DatabaseInitializer.cs" />
     <Compile Include="DatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
