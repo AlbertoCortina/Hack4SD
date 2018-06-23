@@ -30,5 +30,19 @@ namespace Business.Implementations
                 return JsonConvert.DeserializeObject<List<Country>>(streamReader.ReadToEnd());
             }
         }
+
+        public List<City> getAllCities(String countryId)
+        {
+            var url = "/cities?lang=es&country_id=63&api_key=" +  API_KEY;
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(API_BASE + url);
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "GET";
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                return JsonConvert.DeserializeObject<List<City>>(streamReader.ReadToEnd());
+            }
+        }
     }
 }

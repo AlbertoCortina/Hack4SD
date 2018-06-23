@@ -8,7 +8,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            List<City> cities = Factory.getService().getMinubeService().getAllCities("63");
             List<Country> countries = Factory.getService().getMinubeService().getAllCountries();
+            
         }
     }
 }
