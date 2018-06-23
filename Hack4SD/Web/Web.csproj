@@ -147,6 +147,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Buscador.css" />
     <Content Include="Img\default_user.jpg" />
+    <Content Include="Img\lupa.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Mejoras.aspx" />
     <Content Include="Scripts\seccion.js" />

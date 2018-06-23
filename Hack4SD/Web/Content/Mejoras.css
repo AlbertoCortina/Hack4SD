@@ -11581,9 +11581,9 @@ select.form-control {
 .mejora .comentario {
     display:inline-block;
 }
-.mejora .usuario{
-    width:20%;
+.mejora .usuario {
+    width: 15%;
 }
 .mejora .comentario{
-    width:70%;
+    width:84%;
 }

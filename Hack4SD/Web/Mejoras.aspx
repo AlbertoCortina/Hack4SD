@@ -9,7 +9,7 @@
     <hr />
     <div class="mejora">
         <div class="usuario">
-            <img src="/Img/default_user.jpg" alt="Manuel" height="70" width="70"/>
+            <img src="/Img/default_user.jpg" alt="Manuel" height="100" width="100"/>
             <br />
             <p>Manuel</p>
         </div>
@@ -21,7 +21,7 @@
     <hr />
     <div class="mejora">
         <div class="usuario">
-            <img src="/Img/default_user.jpg" alt="Manuela" height="70" width="70"/>
+            <img src="/Img/default_user.jpg" alt="Manuela" height="100" width="100"/>
             <br />
             <p>Manuela</p>
         </div>

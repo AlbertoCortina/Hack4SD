@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="Connectour" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web._Default" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="Scripts/jquery.backstretch.min.js"></script>
-    <link href="Content/boostrap1.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Buscador.css" rel="stylesheet" type="text/css" />
     <script>
         jQuery.backstretch([
             "Img/playaXago.jpg" //ruta de la primera imagen
@@ -12,7 +11,7 @@
         );
     </script>
 
-    <link href="Content/Buscador.css" rel="stylesheet" type="text/css"/>
+    <link href="Content/Default.css" rel="stylesheet" type="text/css"/>
 
     <div class="jumbotron">
         <div class="jumbotron-inner">
