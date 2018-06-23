@@ -9,6 +9,8 @@ namespace Persistence.Implementations
 {
     public class IPersistenceImpl : IPersistence
     {
-    }
+        public IUserPersistence getUserPersistence() => new IUserPersistenceImpl();
+        public IValoracionPersistence getValoracionPersistence() => new IValoracionPersistenceImpl();
 
+    }
 }

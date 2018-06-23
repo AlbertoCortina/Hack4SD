@@ -12,17 +12,13 @@ namespace Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Valoracion
+    public partial class IdeaSostenible
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
-        public string Comentario { get; set; }
-        public string Url { get; set; }
-        public string Puntuacion { get; set; }
-        public int ExperienciaId { get; set; }
+        public string Descripcion { get; set; }
         public int UserId { get; set; }
     
-        public virtual Experiencia Experiencia { get; set; }
         public virtual User User { get; set; }
     }
 }

@@ -18,12 +18,19 @@ namespace Model
         public User()
         {
             this.Valoraciones = new HashSet<Valoracion>();
+            this.Campañas = new HashSet<Campaña>();
+            this.IdeasSostenibles = new HashSet<IdeaSostenible>();
         }
     
         public int Id { get; set; }
-        public string Username { get; set; }
+        public string UserName { get; set; }
+        public string Rol { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Valoracion> Valoraciones { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Campaña> Campañas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<IdeaSostenible> IdeasSostenibles { get; set; }
     }
 }
