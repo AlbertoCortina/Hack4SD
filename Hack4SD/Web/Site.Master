@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Turismo</title>
+    <title><%: Page.Title %> - #Hack4SD</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -38,31 +38,46 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark" >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 3">
             <% // se sobrepone lo que tenga mayor z-index %>
             <a class="navbar-brand" href="/Default.aspx">Turismo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarColor02">
                 <ul class="navbar-nav ml-auto">
+                </ul>
+
+                <ul class="navbar-nav ">
+                </ul>
+
+                <ul class="navbar-nav ">
+                </ul>
+
+                <ul class="navbar-nav">
                     <li>
                         <a class="nav-link" href="/Contact.aspx">Contact</a>
+
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/About.aspx">About</a>
+                        <a class="nav-link" href="/About.aspx">Abaout</a>
                     </li>
                 </ul>
-        </div>
+            </div>
+        </nav>
+
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - #Hack4SD Turismo #Equipo2</p>
+                <p>&copy; <%: DateTime.Now.Year %> - #Hack4SD</p>
             </footer>
         </div>
+
 
     </form>
 </body>
