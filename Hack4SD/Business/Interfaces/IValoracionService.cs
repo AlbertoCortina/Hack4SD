@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistence.Interfaces
+namespace Business.Interfaces
 {
-    public interface IUserPersistence
+    public interface IValoracionService
     {
-        User getUserById(int id);
+        List<Valoracion> getAllValoraciones();
     }
 }

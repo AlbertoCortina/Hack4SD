@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Persistence.Interfaces
 {
-    public interface IUserPersistence
+    public interface IValoracionPersistence
     {
-        User getUserById(int id);
+        List<Valoracion> getAllValoraciones();
     }
 }

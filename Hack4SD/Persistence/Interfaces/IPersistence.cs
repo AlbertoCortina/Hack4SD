@@ -9,5 +9,6 @@ namespace Persistence.Interfaces
     public interface IPersistence
     {
         IUserPersistence getUserPersistence();
+        IValoracionPersistence getValoracionPersistence();
     }
 }

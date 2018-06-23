@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="Implementations\IPersistenceImpl.cs" />
     <Compile Include="Implementations\IUserPersistenceImpl.cs" />
+    <Compile Include="Implementations\IValoracionPersistenceImpl.cs" />
     <Compile Include="Interfaces\IUserPersistence.cs" />
     <Compile Include="Interfaces\IPersistence.cs" />
+    <Compile Include="Interfaces\IValoracionPersistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
