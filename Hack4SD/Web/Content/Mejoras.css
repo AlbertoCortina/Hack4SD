@@ -11574,10 +11574,16 @@ select.form-control {
 }
 
 .mejora{
-    align-content:center;
+    width:1000px;
 }
 
-.usuario ,
-.comentario{
-    display:inline;
+.mejora .usuario,
+.mejora .comentario {
+    display:inline-block;
+}
+.mejora .usuario{
+    width:20%;
+}
+.mejora .comentario{
+    width:70%;
 }
