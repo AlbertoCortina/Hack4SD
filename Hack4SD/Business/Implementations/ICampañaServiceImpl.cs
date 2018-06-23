@@ -1,4 +1,6 @@
 ﻿using Business.Interfaces;
+using Configuration;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,9 @@ namespace Business.Implementations
 {
     class ICampañaServiceImpl : ICampañaService
     {
-        public ICampañaService getCampañaService() => new ICampañaServiceImpl();
+        public List<Campaña> getAllCampañas()
+        {
+            return Factory.getPersistence().getCampañaPersistence().getAllCampañas();
+        }
     }
 }

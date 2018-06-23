@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Business.Interfaces
 {
-    public interface ICampañaService
+    public interface IExperienciaService
     {
-        List<Campaña> getAllCampañas();
+        Experiencia getExperienciaByCiudadAndCategoria(String ciudad, String categoria);
     }
 }

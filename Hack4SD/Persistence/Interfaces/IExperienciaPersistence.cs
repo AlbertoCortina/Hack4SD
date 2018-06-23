@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Persistence.Interfaces
 {
-    public interface IIdeaSosteniblePersistence
+    public interface IExperienciaPersistence
     {
-        List<IdeaSostenible> getIdeasSosteniblesByCity(string ciudad);
+        Experiencia getExperienciaByCiudadAndCategoria(String ciudad, String categoria);
     }
 }

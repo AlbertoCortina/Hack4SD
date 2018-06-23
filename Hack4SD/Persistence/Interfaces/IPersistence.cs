@@ -11,5 +11,7 @@ namespace Persistence.Interfaces
         IUserPersistence getUserPersistence();
         IValoracionPersistence getValoracionPersistence();
         ICampañaPersistence getCampañaPersistence();
+        IIdeaSosteniblePersistence getIdeaSosteniblePersistence();
+        IExperienciaPersistence getExperienciaPersistence();
     }
 }

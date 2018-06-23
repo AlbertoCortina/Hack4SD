@@ -14,5 +14,7 @@ namespace Business.Services
         IUserService getUserService();
         IValoracionService getValoracionService();
         ICampañaService getCampañaService();
+        IIdeaSostenibleService getIdeaSostenibleService();
+        IExperienciaService getExperienciaService();
     }
 }

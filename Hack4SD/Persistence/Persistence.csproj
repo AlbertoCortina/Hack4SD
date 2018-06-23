@@ -40,16 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="Implementations\ICampañaPersitenceImpl.cs" />
+    <Compile Include="Implementations\IExperienciaPersistenceImpl.cs" />
     <Compile Include="Implementations\IPersistenceImpl.cs" />
     <Compile Include="Implementations\IUserPersistenceImpl.cs" />
     <Compile Include="Implementations\IValoracionPersistenceImpl.cs" />
     <Compile Include="Interfaces\ICampañaPersistence.cs" />
-
     <Compile Include="Implementations\IIdeaSosteniblePersistenceImpl.cs" />
+    <Compile Include="Interfaces\IExperienciaPersistence.cs" />
     <Compile Include="Interfaces\IIdeaSosteniblePersistence.cs" />
-
     <Compile Include="Interfaces\IUserPersistence.cs" />
     <Compile Include="Interfaces\IPersistence.cs" />
     <Compile Include="Interfaces\IValoracionPersistence.cs" />
