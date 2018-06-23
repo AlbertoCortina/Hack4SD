@@ -18,6 +18,7 @@ namespace Model
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
         public int UserId { get; set; }
+        public string Ciudad { get; set; }
     
         public virtual User User { get; set; }
     }
