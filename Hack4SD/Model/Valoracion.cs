@@ -19,7 +19,6 @@ namespace Model
         public string Comentario { get; set; }
         public string Url { get; set; }
         public string Puntuacion { get; set; }
-        public string ValoracionMedia { get; set; }
         public int ExperienciaId { get; set; }
         public int UserId { get; set; }
     

@@ -194,7 +194,6 @@
           <Property Name="Comentario" Type="String" Nullable="false" />
           <Property Name="Url" Type="String" Nullable="false" />
           <Property Name="Puntuacion" Type="String" Nullable="false" />
-          <Property Name="ValoracionMedia" Type="String" Nullable="false" />
           <NavigationProperty Name="Experiencia" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Valoracion" ToRole="Experiencia" />
           <Property Name="ExperienciaId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="User" Relationship="DatabaseModel.UserValoracion" FromRole="Valoracion" ToRole="User" />
@@ -212,6 +211,7 @@
           <Property Name="Ciudad" Type="String" Nullable="false" />
           <NavigationProperty Name="Valoraciones" Relationship="DatabaseModel.ExperienciaValoracion" FromRole="Experiencia" ToRole="Valoracion" />
           <NavigationProperty Name="Campañas" Relationship="DatabaseModel.ExperienciaCampaña" FromRole="Experiencia" ToRole="Campaña" />
+          <Property Name="ValoracionMedia" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Campaña">
           <Key>
@@ -318,7 +318,6 @@
           <ScalarProperty Name="Comentario" ColumnName="Comentario" />
           <ScalarProperty Name="Url" ColumnName="Url" />
           <ScalarProperty Name="Puntuacion" ColumnName="Puntuacion" />
-          <ScalarProperty Name="ValoracionMedia" ColumnName="ValoracionMedia" />
           <ScalarProperty Name="ExperienciaId" ColumnName="ExperienciaId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
         </MappingFragment>
