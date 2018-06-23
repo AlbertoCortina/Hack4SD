@@ -10,9 +10,9 @@ namespace Business.Services.Impl
 {
     public class IServiceImpl : IService
     {
-        public IMinubeService getMinubeService()
-        {
-            return new IMinubeServiceImpl();
-        }
+        public IMinubeService getMinubeService() => new IMinubeServiceImpl();
+
+        public IUserService getUserService() => new IUserServiceImpl();
+
     }
 }

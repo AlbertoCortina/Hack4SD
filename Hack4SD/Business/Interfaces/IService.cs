@@ -10,5 +10,7 @@ namespace Business.Services
     public interface IService
     {
         IMinubeService getMinubeService();
+
+        IUserService getUserService();
     }
 }

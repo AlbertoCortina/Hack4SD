@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory.cs" />
     <Compile Include="Implementations\IMinubeServiceImpl.cs" />
+    <Compile Include="Implementations\IUserServiceImpl.cs" />
     <Compile Include="Interfaces\IMinubeService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Implementations\IServiceImpl.cs" />
     <Compile Include="Interfaces\IService.cs" />
@@ -53,6 +56,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{25d539bc-7ee7-4c71-83f3-fe39ed25be97}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence\Persistence.csproj">
+      <Project>{DE58E0FC-38EF-4FE8-BE7D-8105CB0CB1AE}</Project>
+      <Name>Persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
