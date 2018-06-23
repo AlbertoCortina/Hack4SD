@@ -14,6 +14,7 @@ namespace Model
         public IList<Valoracion> valoraciones { get; set; }
         public IList<Campaña> campañas { get; set; }
         public IList<IdeaSostenible> ideasSostenibles { get; set; }
+        public IList<Experiencia> experiencias { get; set; }
 
         private Model() => initData();
 
@@ -31,17 +32,57 @@ namespace Model
             // Usuarios
             users = new List<User>()
             {
-                new User { Id = 1, UserName = "Alberto", Rol = "Turista"},
-                new User { Id = 2, UserName = "Victor", Rol = "Comunidad"},
-                new User { Id = 3, UserName = "Laura", Rol = "Institucion"},
-                new User { Id = 4, UserName = "Miguel Angel", Rol = "Comunidad"},
-                new User { Id = 5, UserName = "Daniela", Rol = "Turista"},
+                new User
+                {
+                    Id = 1,
+                    UserName = "Alberto",
+                    Rol = "Turista",
+                    Valoraciones = valoraciones.Where(v => v.User.Id == 1).ToList(),
+                    Campañas = campañas.Where(v => v.User.Id == 1).ToList(),
+                    IdeasSostenibles = ideasSostenibles.Where(v => v.User.Id == 1).ToList()
+                },
+                new User
+                {
+                    Id = 2,
+                    UserName = "Victor",
+                    Rol = "Comunidad",
+                    Valoraciones = valoraciones.Where(v => v.User.Id == 2).ToList(),
+                    Campañas = campañas.Where(v => v.User.Id == 2).ToList(),
+                    IdeasSostenibles = ideasSostenibles.Where(v => v.User.Id == 2).ToList()
+                },
+                new User
+                {
+                    Id = 3,
+                    UserName = "Laura",
+                    Rol = "Institucion",
+                    Valoraciones = valoraciones.Where(v => v.User.Id == 3).ToList(),
+                    Campañas = campañas.Where(v => v.User.Id == 3).ToList(),
+                    IdeasSostenibles = ideasSostenibles.Where(v => v.User.Id == 3).ToList()},
+                new User
+                {
+                    Id = 4,
+                    UserName = "Miguel Angel",
+                    Rol = "Comunidad",
+                    Valoraciones = valoraciones.Where(v => v.User.Id == 4).ToList(),
+                    Campañas = campañas.Where(v => v.User.Id == 4).ToList(),
+                    IdeasSostenibles = ideasSostenibles.Where(v => v.User.Id == 4).ToList()
+                },
+                new User
+                {
+                    Id = 5,
+                    UserName = "Daniela",
+                    Rol = "Turista",
+                    Valoraciones = valoraciones.Where(v => v.User.Id == 5).ToList(),
+                    Campañas = campañas.Where(v => v.User.Id == 5).ToList(),
+                    IdeasSostenibles = ideasSostenibles.Where(v => v.User.Id == 5).ToList()
+                },
             };
 
             //Valoraciones
             valoraciones = new List<Valoracion>
             {
-                new Valoracion {
+                new Valoracion
+                {
                     Id = 1,
                     Titulo = "Increible!",
                     Comentario = "Ha sido una experiencia increible, un sitio precioso, digno de visitar.",
@@ -49,7 +90,8 @@ namespace Model
                     Puntuacion = "4",
                     User = users[0]
                 }
-                , new Valoracion {
+                , new Valoracion
+                {
                     Id = 2,
                     Titulo = "Bonito",
                     Comentario = "Una de las sendas mas bonitas que he podido disfrutar. Además, la zona de descanso esta muy cuidada.",
@@ -57,7 +99,8 @@ namespace Model
                     Puntuacion = "5" ,
                     User = users[1]
                 }
-                , new Valoracion {
+                , new Valoracion
+                {
                     Id = 3,
                     Titulo = "Muy recomendable",
                     Comentario = "Esta catedral en concreto puede ser una de las mejores que he tenido la suerte de visitar. La forma de los arcos es increible",
@@ -87,7 +130,7 @@ namespace Model
                 }
             };
 
-            //Ideas sostenibles
+            // Ideas sostenibles
             ideasSostenibles = new List<IdeaSostenible>
             {
                 new IdeaSostenible
@@ -107,6 +150,34 @@ namespace Model
                 }
             };
 
+            // Experiencias
+            experiencias = new List<Experiencia>
+            {
+                new Experiencia
+                {
+                    Id = 1,
+                    Titulo = "Experiencia 1",
+                    Descripcion = "Descripcion 1",
+                    Contenido = "Contenido 1",
+                    Categoria = "Categoria 1",
+                    Ciudad = "Oviedo",
+                    ValoracionMedia = "5",
+                    Valoraciones = valoraciones.Where(v => v.Experiencia.Id == 1).ToList(),
+                    Campañas = campañas.Where(v => v.Experiencia.Id == 1).ToList()
+                },
+                new Experiencia
+                {
+                    Id = 2,
+                    Titulo = "Experiencia 2",
+                    Descripcion = "Descripcion 2",
+                    Contenido = "Contenido 2",
+                    Categoria = "Categoria 2",
+                    Ciudad = "Oviedo",
+                    ValoracionMedia = "5",
+                    Valoraciones = valoraciones.Where(v => v.Experiencia.Id == 1).ToList(),
+                    Campañas = campañas.Where(v => v.Experiencia.Id == 1).ToList()
+                }
+            };
         }
     }
 }

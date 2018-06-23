@@ -10,6 +10,10 @@ namespace Persistence.Implementations
 {
     class ICampañaPersitenceImpl : ICampañaPersistence
     {
-        public List<Campaña> getAllCampañas() => Model.Model.getInstance().campañas.ToList();
+        IList<Campaña> campañas = Model.Model.getInstance().campañas;
+        public List<Campaña> getAllCampañas()
+        {
+            return campañas.ToList();
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Persistence.Implementations
 
         public List<IdeaSostenible> getIdeasSosteniblesByCity(string ciudad)
         {
-            var ideaSostenible = ideasSostenibles.Where(i => i.Ciudad.Equals("Oviedo")).ToList();
+            var ideaSostenible = ideasSostenibles.Where(i => i.Ciudad.Equals(ciudad)).ToList();
             if (ideaSostenible != null)
             {
                 return ideaSostenible;
