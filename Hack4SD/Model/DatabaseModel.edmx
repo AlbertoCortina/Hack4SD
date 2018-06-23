@@ -82,6 +82,7 @@
     <Property Name="Titulo" Type="longtext" Nullable="false" />
     <Property Name="Descripcion" Type="longtext" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Ciudad" Type="longtext" Nullable="false" />
   </EntityType>
   <Association Name="ExperienciaValoracion">
     <End Role="Experiencia" Type="DatabaseModel.Store.Experiencias" Multiplicity="1" />
@@ -234,6 +235,7 @@
           <Property Name="Descripcion" Type="String" Nullable="false" />
           <NavigationProperty Name="User" Relationship="DatabaseModel.UserIdeaSostenible" FromRole="IdeaSostenible" ToRole="User" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Ciudad" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="ExperienciaValoracion">
           <End Type="DatabaseModel.Experiencia" Role="Experiencia" Multiplicity="1" />
@@ -354,6 +356,7 @@
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

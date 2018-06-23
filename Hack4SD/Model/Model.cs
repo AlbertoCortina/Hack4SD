@@ -95,12 +95,14 @@ namespace Model
                     Id = 1,
                     Titulo = "Idea sostenible 1",
                     Descripcion = "Descripcion muy bonita de la idea sostenible 1",
+                    Ciudad = "Oviedo",
                     User = users[0]
                 },
                 new IdeaSostenible {
                     Id = 2,
                     Titulo = "Idea sostenible 2",
                     Descripcion = "Descripcion muy bonita de la idea sostenible 2",
+                    Ciudad = "Oviedo",
                     User = users[1]
                 }
             };
