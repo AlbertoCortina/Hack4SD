@@ -22,7 +22,7 @@
     <div class="buscador">
         <div class="title">
             <h1>ConnecTour</h1>
-            <h1></h1>
+            <h3>Connections and Tourism Experience</h3>
         </div>
         <div class="form_buscador">
             <asp:DropDownList ID="ddlVisualTemplate" CssClass="dropdown" runat="server" LabelText="Visual Template:" AutoPostBack="true" OnSelectedIndexChanged="ddlVisualTemplate_SelectedIndexChanged" />

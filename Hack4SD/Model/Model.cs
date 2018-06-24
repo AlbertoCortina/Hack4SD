@@ -117,15 +117,21 @@ namespace Model
                 new IdeaSostenible
                 {
                     Id = 0,
-                    Titulo = "Idea sostenible 1",
-                    Descripcion = "Descripcion muy bonita de la idea sostenible 1",
-                    Ciudad = "Oviedo"
+                    Titulo = "Apoyo a la propuesta de un ciudadano de aquí",
+                    Descripcion = "Hace unos días, apareció la noticia de un chico de Avilés, que creo un blog en el cual compartía distinta información acerca de las iglesias y" +
+                    " capillas de Oviedo. El chico, Álvaro Otonin, nos ofrece mucha información de interes sobre una gran cantidad de monumentos de caracter religioso.\n" +
+                    "Me gustaría que se le apoyase a este chico y que se le proporcione alguna ayuda para que siga dando toda esta información que nos ofrece.\n" +
+                    "Dejo a continuación el link a su pagina: iglesiascapillasoviedo.blogspot.com",
+                    Ciudad = "Oviedo",
+
                 },
                 new IdeaSostenible {
                     Id = 1,
-                    Titulo = "Idea sostenible 2",
-                    Descripcion = "Descripcion muy bonita de la idea sostenible 2",
-                    Ciudad = "Oviedo"
+                    Titulo = "Sistema de Gestión Ambiental, EMAS",
+                    Descripcion = "EMAS es un sistema voluntario de gestión ambiental que permite a las organizaciones evaluar y mejorar su comportamiento ambiental y promueve la " +
+                    "mejora continua del comportamiento ambiental de las organizaciones mediante la implementación de un sisteme de gestión ambiental, la evaluación sistemática, periódica" +
+                    " y objtiva del propio sistema, La información al público y las paretes interesadas y la formación e implicación activa de los trabajadores....",
+                    Ciudad = "Oviedo",
                 }
             };
 
@@ -135,20 +141,22 @@ namespace Model
                 new Experiencia
                 {
                     Id = 0,
-                    Titulo = "Experiencia 1",
-                    Descripcion = "Descripcion 1",
-                    Contenido = "Contenido 1",
-                    Categoria = "Categoria 1",
+                    Titulo = "Visita a la catedral con guia virtual",
+                    Descripcion = "Antonio Fernández Insuela ofrece uan visita virtual guiada de la Catedral de Oviedo",
+                    Contenido = "A través de su página web, puedes recorrer por completo este bonito monumento histórico " +
+                    "de la capital de Asturias...",
+                    Categoria = "Monumentos",
                     Ciudad = "Oviedo",
-                    ValoracionMedia = "5"
+                    ValoracionMedia = "5",
                 },
                 new Experiencia
                 {
                     Id = 1,
-                    Titulo = "Experiencia 2",
-                    Descripcion = "Descripcion 2",
-                    Contenido = "Contenido 2",
-                    Categoria = "Categoria 2",
+                    Titulo = "Ruta por la Senda del Oso",
+                    Descripcion = "Visita la senda del Oso, uno de los lugares mas bonitos de Asturias",
+                    Contenido = "Si te gustan los paraisos naturales, disfrutas de la naturaleza y caminar al aire libre, esta puede" +
+                    "la aventura que necesites...",
+                    Categoria = "Senderismo",
                     Ciudad = "Oviedo",
                     ValoracionMedia = "5"
                 }
