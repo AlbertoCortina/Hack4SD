@@ -23,7 +23,7 @@
     <div class="buscador">
         <div class="title">
             <h1>ConnecTour</h1>
-            <h1></h1>
+            <h3>Connections and Tourism Experience</h3>
         </div>
         <div class="form_buscador">
             <input class="form_buscador" id="search_field" type="text" value="Buscar Ciudad..." onfocus="if (this.value == 'Buscar Ciudad...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar Ciudad...';}" />
