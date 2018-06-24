@@ -1,59 +1,62 @@
-// type anything here
-const text = 'hover me';
 
-// this function turns a string into an array
-const createLetterArray = (string) => {
-  return string.split('');
-}
+$(document).ready(function () {
 
-// this function creates letter layers wrapped in span tags
-const createLetterLayers = (array) => {
-  return array.map((letter) => {
-      let layer = '';
-      //specify # of layers per letter
-      for (let i = 1; i <= 2; i++) {
-        // if letter is a space
-        if(letter == ' '){
-          layer += '<span class="space"></span>';
-        }else{
-          layer += '<span class="letter-'+i+'">'+letter+'</span>';
-        }
-      }
-      return layer;
-  });
-}
 
-// this function wraps each letter in a parent container
-const createLetterContainers = (array) => {
-  return array.map((item) => {
-    let container = '';
-    container += '<div class="wrapper">'+item+'</div>';
-    return container;
-  });
-}
 
-// use a promise to output text layers into DOM first
-const outputLayers = new Promise(function(resolve, reject) {
-      document.getElementById('text').innerHTML = createLetterContainers(createLetterLayers(createLetterArray(text))).join('');
-      resolve();
+    var numItems = $('li.fancyTab').length;
+
+
+    if (numItems == 12) {
+        $("li.fancyTab").width('8.3%');
+    }
+    if (numItems == 11) {
+        $("li.fancyTab").width('9%');
+    }
+    if (numItems == 10) {
+        $("li.fancyTab").width('10%');
+    }
+    if (numItems == 9) {
+        $("li.fancyTab").width('11.1%');
+    }
+    if (numItems == 8) {
+        $("li.fancyTab").width('12.5%');
+    }
+    if (numItems == 7) {
+        $("li.fancyTab").width('14.2%');
+    }
+    if (numItems == 6) {
+        $("li.fancyTab").width('16.666666666666667%');
+    }
+    if (numItems == 5) {
+        $("li.fancyTab").width('20%');
+    }
+    if (numItems == 4) {
+        $("li.fancyTab").width('25%');
+    }
+    if (numItems == 3) {
+        $("li.fancyTab").width('33.3%');
+    }
+    if (numItems == 2) {
+        $("li.fancyTab").width('50%');
+    }
+
+
+
+
 });
 
-// then adjust width and height of each letter
-const spans = Array.prototype.slice.call(document.getElementsByTagName('span'));
-outputLayers.then(() => {
-    return spans.map((span) => {
-      setTimeout(() => {
-        span.parentElement.style.width = span.offsetWidth+'px';
-        span.parentElement.style.height = span.offsetHeight+'px';
-      }, 250);
-    });  
-}).then(() => {
-    // then slide letters into view one at a time
-    let time = 250;
-    return spans.map((span) => {
-      time += 75;
-      setTimeout(() => {
-        span.parentElement.style.top = '0px';
-      }, time);
+$(window).load(function () {
+
+    $('.fancyTabs').each(function () {
+
+        var highestBox = 0;
+        $('.fancyTab a', this).each(function () {
+
+            if ($(this).height() > highestBox)
+                highestBox = $(this).height();
+        });
+
+        $('.fancyTab a', this).height(highestBox);
+
     });
 });

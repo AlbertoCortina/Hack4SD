@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master"  AutoEventWireup="true" CodeBehind="ExperienciaTour.aspx.cs" Inherits="Web.ExperienciaTour" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ExperienciaTour.aspx.cs" Inherits="Web.ExperienciaTour" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Pista Filandesa</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                           <asp:Button class="btn btn-primary btn-sm" ID="Button1" runat="server" Text="Experienimentar" OnClick="Button1_Click" />
+                            <asp:Button class="btn btn-primary btn-sm" ID="Button1" runat="server" Text="Experienimentar" OnClick="Button1_Click" />
 
                         </div>
                     </div>
@@ -57,14 +57,6 @@
                     </section>
                 </a>
 
-                <div class="row1">
-                    <a href="Default.aspx" class="thumbnail">
-                        <h1></h1>
-                        <section class="head" id="piraguismo">
-                            <a href="Default.aspx" data-bf="" data-af="">piragüismo</a>
-                        </section>
-                    </a>
-                </div>
                 <div class="row1">
                     <a href="Default.aspx" class="thumbnail">
                         <h1></h1>

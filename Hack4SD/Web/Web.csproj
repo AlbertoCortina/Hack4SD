@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\ConectTour.css" />
+    <Content Include="Content\General.css" />
     <Content Include="General.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
@@ -147,15 +148,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Buscador.css" />
-<<<<<<< HEAD
     <Content Include="Login.aspx" />
     <Content Include="Scripts\connect.js" />
-=======
     <Content Include="Img\default_user.jpg" />
     <Content Include="Img\lupa.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Mejoras.aspx" />
->>>>>>> 665ede1ffea84d8ab05c79a2acec5ae986bca2f8
     <Content Include="Scripts\seccion.js" />
     <Content Include="Scripts\jquery.backstretch.min.js" />
     <Content Include="Content\Site.css" />
@@ -272,8 +270,6 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="Mejoras.aspx.cs">
       <DependentUpon>Mejoras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -281,7 +277,6 @@
     <Compile Include="Mejoras.aspx.designer.cs">
       <DependentUpon>Mejoras.aspx</DependentUpon>
     </Compile>
->>>>>>> 665ede1ffea84d8ab05c79a2acec5ae986bca2f8
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
