@@ -1,0 +1,259 @@
+﻿h2 {
+    color: black;
+    display: block;
+    font: bold 72px Helvetica;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.hovertown span {
+    transition: all 0.9s ease;
+}
+
+    .hovertown span:hover {
+        text-shadow: 0 0 72px black;
+        color: transparent;
+        transition: all 0.2s ease;
+    }
+
+@keyframes blackblur {
+    from {
+        text-shadow: 0 0 72px black;
+        color: transparent;
+    }
+
+    to {
+        text-shadow: 0;
+        color: black;
+    }
+}
+
+.smokemonster span:nth-of-type(1) {
+    animation: blackblur 2s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(2) {
+    animation: blackblur 2s 0.1s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(3) {
+    animation: blackblur 2s 0.15s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(4) {
+    animation: blackblur 2s 0.2s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(5) {
+    animation: blackblur 2s 0.25s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(6) {
+    animation: blackblur 2s 0.3s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(7) {
+    animation: blackblur 2s 0.35s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(8) {
+    animation: blackblur 2s 0.4s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(9) {
+    animation: blackblur 2s 0.45s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(10) {
+    animation: blackblur 2s 0.5s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(11) {
+    animation: blackblur 2s 0.55s 1 alternate;
+}
+
+.smokemonster span:nth-of-type(12) {
+    animation: blackblur 2s 0.6s 1 alternate;
+}
+
+@keyframes fun-1 {
+    from {
+        text-shadow: 0 0 72px red;
+        color: transparent;
+    }
+
+    to {
+        text-shadow: 0;
+        color: black;
+    }
+}
+
+@keyframes fun-2 {
+    from {
+        text-shadow: 0 0 22px blue;
+        color: transparent;
+    }
+
+    to {
+        text-shadow: 0;
+        color: black;
+    }
+}
+
+@keyframes fun-3 {
+    from {
+        text-shadow: 0 0 152px green;
+        color: transparent;
+    }
+
+    to {
+        text-shadow: 0;
+        color: black;
+    }
+}
+
+@keyframes fun-4 {
+    from {
+        text-shadow: 0 0 102px cyan;
+        color: transparent;
+    }
+
+    to {
+        text-shadow: 0;
+        color: black;
+    }
+}
+
+@keyframes fun-5 {
+    from {
+        text-shadow: 0 0 222px magenta;
+        color: transparent;
+    }
+
+    to {
+        text-shadow: 0;
+        color: black;
+    }
+}
+
+@keyframes fun-6 {
+    from {
+        text-shadow: 0 0 92px yellow;
+        color: transparent;
+    }
+
+    to {
+        text-shadow: 0;
+        color: black;
+    }
+}
+
+.sparklemaster {
+    color: white;
+}
+
+    .sparklemaster span:nth-of-type(1) {
+        animation: fun-1 2s 0.2s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(2) {
+        animation: fun-2 2s 3.9s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(3) {
+        animation: fun-3 2s 2.65s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(4) {
+        animation: fun-4 2s 2.2s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(5) {
+        animation: fun-5 2s 1.25s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(6) {
+        animation: fun-6 2s 2.3s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(7) {
+        animation: fun-1 2s 3.35s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(8) {
+        animation: fun-2 2s 2.4s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(9) {
+        animation: fun-3 2s 1.45s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(10) {
+        animation: fun-4 2s 3.5s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(11) {
+        animation: fun-5 2s 1.55s 1 alternate;
+    }
+
+    .sparklemaster span:nth-of-type(12) {
+        animation: fun-6 2s 2.6s 1 alternate;
+    }
+
+.textshadow .foreverblur {
+    text-shadow: 0 0 32px white;
+    color: transparent;
+}
+
+#jquerybuddy span {
+    text-shadow: 0 0 4px rgba(0,100,0,1);
+    color: transparent;
+}
+
+section {
+    padding: 10px 100px;
+    a *
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+}
+
+#container {
+    width: 800px;
+    height: 380px;
+    margin: 50px auto;
+    padding: 170px 0 0 0;
+    text-align: center;
+    background: url(https://line25.com/wp-content/uploads/2009/anaglyphic-text/demo/main-bg.jpg) 0 0 no-repeat;
+}
+
+h1 {
+    display: inline;
+    position: relative;
+    font: 200px Helvetica, Sans-Serif;
+    letter-spacing: -5px;
+    color: rgba(0,0,255,0.5);
+}
+
+    h1:after {
+        content: "Hello";
+        position: absolute;
+        left: 10px;
+        top: 5px;
+        color: rgba(255,0,0,0.5);
+    }
+    text-align: center;
+}
+
+    section:nth-child(odd) {
+        background: #eee;
+    }
+
+    section:nth-child(even) {
+        background: #333;
+    }

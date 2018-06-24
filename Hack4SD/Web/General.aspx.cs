@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Configuration;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,9 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
+               
+        
         }
     }
-}
+    }
