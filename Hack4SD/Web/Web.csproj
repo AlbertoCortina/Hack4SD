@@ -150,6 +150,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Buscador.css" />
+    <Content Include="Img\DanielaF.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\connect.js" />
     <Content Include="Img\default_user.jpg" />
@@ -330,7 +331,6 @@
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{25d539bc-7ee7-4c71-83f3-fe39ed25be97}</Project>
-
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>

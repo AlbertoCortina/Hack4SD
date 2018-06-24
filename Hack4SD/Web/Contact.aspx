@@ -35,8 +35,8 @@
         <div class="E" style="display:inline-block; width: 200px; padding: 25px 0; margin: 0;">
             <img class="rounded-circle " src="Img/About/Daniela.jpeg">
             <h3></h3>
-            <h3 style="margin-left: 0rem">Daniela Fantoni Álvares</h3>
-            <p class="text-muted">Turism</p>
+            <h3 style="margin-left: 0rem">Daniela Fantoni Alvares</h3>
+            <p class="text-muted">Tourism Expert</p>
         </div>
     </div>
     <%//Fin div contenedor %>

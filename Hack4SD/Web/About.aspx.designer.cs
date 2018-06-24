@@ -10,6 +10,6 @@
 namespace Web {
     
     
-    public partial class Mejoras {
+    public partial class About {
     }
 }

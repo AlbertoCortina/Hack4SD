@@ -25,8 +25,8 @@
             <h3>Connections and Tourism Experience</h3>
         </div>
         <div class="form_buscador">
-            <asp:DropDownList ID="ddlVisualTemplate" CssClass="dropdown" runat="server" LabelText="Visual Template:" AutoPostBack="true" OnSelectedIndexChanged="ddlVisualTemplate_SelectedIndexChanged" />
-            <button type="button" class="btn btn-primary">Buscar</button>
+            <asp:DropDownList Width="1000px" ID="ddlVisualTemplate" CssClass="dropdown" runat="server" LabelText="Visual Template:" AutoPostBack="true" OnSelectedIndexChanged="ddlVisualTemplate_SelectedIndexChanged " />
+             <asp:Button class="btn btn-primary btn-sm"  ID="Button2" runat="server" Text="Experienimentar" OnClick="Button1_Click" />
         </div>
     </div>
 

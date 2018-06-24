@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Como mejorar la experiencia" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Mejoras.aspx.cs" Inherits="Web.Mejoras" %>
+﻿<%@ Page Title="Ideas Sostenible" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Mejoras.aspx.cs" Inherits="Web.Mejoras" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/Mejoras.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +35,7 @@
     <footer>
         <div id="añadir">
             <p>Colabora con nosotros y añade tu idea para mejorar:</p>
-            <input type="button" value="Añadir" />
+           <button type="button" class="btn btn-primary">Añadir</button>
         </div>
     </footer>
 

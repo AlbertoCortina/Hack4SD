@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Acerca de nuestra idea" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Web.Mejoras" %>
+﻿<%@ Page Title="Acerca de nuestra idea" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Web.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2 style="margin-top: 30px"><%: Title %></h2>
