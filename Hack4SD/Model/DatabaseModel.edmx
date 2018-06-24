@@ -49,7 +49,6 @@
     <Property Name="Comentario" Type="longtext" Nullable="false" />
     <Property Name="Url" Type="longtext" Nullable="false" />
     <Property Name="Puntuacion" Type="longtext" Nullable="false" />
-    <Property Name="ValoracionMedia" Type="longtext" Nullable="false" />
     <Property Name="ExperienciaId" Type="int" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
   </EntityType>
@@ -63,6 +62,7 @@
     <Property Name="Contenido" Type="longtext" Nullable="false" />
     <Property Name="Categoria" Type="longtext" Nullable="false" />
     <Property Name="Ciudad" Type="longtext" Nullable="false" />
+    <Property Name="ValoracionMedia" Type="longtext" Nullable="false" />
   </EntityType>
   <EntityType Name="Campañas">
     <Key>
@@ -332,6 +332,7 @@
           <ScalarProperty Name="Contenido" ColumnName="Contenido" />
           <ScalarProperty Name="Categoria" ColumnName="Categoria" />
           <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="ValoracionMedia" ColumnName="ValoracionMedia" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

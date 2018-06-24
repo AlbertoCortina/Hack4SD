@@ -10,9 +10,10 @@ namespace Persistence.Implementations
 {
     class IValoracionPersistenceImpl : IValoracionPersistence
     {
+        IList<Valoracion> valoraciones = Model.Model.getInstance().valoraciones;
         public List<Valoracion> getAllValoraciones()
         {
-            return Model.Model.getInstance().valoraciones;
+            return valoraciones.ToList();
         }
     }
 }
