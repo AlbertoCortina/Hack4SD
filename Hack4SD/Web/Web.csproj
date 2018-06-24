@@ -323,11 +323,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
+<<<<<<< HEAD
       <Project>{979A2DD6-242A-40C3-B78A-B69DFB659E25}</Project>
       <Name>Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{25D539BC-7EE7-4C71-83F3-FE39ED25BE97}</Project>
+=======
+      <Project>{979a2dd6-242a-40c3-b78a-b69dfb659e25}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{25d539bc-7ee7-4c71-83f3-fe39ed25be97}</Project>
+>>>>>>> db9c7e1b62dfd1eec538912cf3782749eb2e76a5
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>

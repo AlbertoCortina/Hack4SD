@@ -6,3 +6,4 @@ Integrantes del equipo:
 * Víctor Manuel Chaves García (@MaVic96)
 * Alberto Cortina Eduarte (@AlbertoCortina)
 * Laura Marcela Sánchez Peláez (@lamasape)
+* Daniela Fantoni Alvares

@@ -9,5 +9,5 @@
     <br />
     <p style="font-size:16px;">La plataforma viene en respuesta a actos de Turismofobia o de aversión a la actividad turística vivenciados en varios países del mundo, así como de la necesidad de invertimos en acciones de conservación del patrimonio natural y cultural de los destinos. La comunidad puede incluso decir "que tipo de turista desea". En esta sección, los costumbres y las reglas locales son difundidas.</p>
     <br />
-    <p style="font-size:16px;">El turista y la comunidad pueden involucrarse en campanas como adopte un atractivo turístico o campanas de educación ambiental/patrimonial o compre de los pequeños productores locales. </p>
+    <p style="font-size:16px;">El turista y la comunidad pueden involucrarse en campañas como adopte un atractivo turístico o campañas de educación ambiental/patrimonial o compre de los pequeños productores locales. </p>
 </asp:Content>

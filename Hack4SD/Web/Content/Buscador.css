@@ -13,6 +13,11 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
+dropdown {
+    width:500px;
+    height:100px;
+}
+
 :root {
     --blue: #2196F3;
     --indigo: #6610f2;
