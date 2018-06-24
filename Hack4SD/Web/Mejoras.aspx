@@ -3,31 +3,32 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/Mejoras.css" rel="stylesheet" type="text/css"/>
     <h2 style="margin-top: 30px"><%: Title %></h2>
-    <h3>Interacción autóctonos - turista</h3>
+    <h3>Interacción comunidad - turista</h3>
     <p>Nuestra página web pone en contacto las experiencias de la gente autóctona con los turistas que visitan la zona.</p>
     
     <hr />
-    <div class="mejora">
+    <div class="mejora" style="background-color:powderblue">
         <div class="usuario">
-            <img src="/Img/default_user.jpg" alt="Manuel" height="100" width="100"/>
+             <img src="https://cdn.icon-icons.com/icons2/67/PNG/512/user_13230.png" height="100" width="100" />
             <br />
-            <p>Manuel</p>
+            <p runat="server" id="Idea1_user" style="font:bold 24px arial, verdana;padding-left:8px"></p>
         </div>
         <div class="comentario">
-            <h4>Mejora 1</h4>
-            <p>Como mejora iubarouyfbaifj rfniuafnai ehrf qouwf fhqbefqyubfj f ufybqifuqfhgq ouyb buvqneui buy qr uyfb qb unfbuo wbqnreiunq bi qnuivnqriuqnr</p>
+            <h4 runat="server" id="Idea1_h4"></h4>
+            <p  runat="server" id="Idea1_p"></p>
+            
         </div>
     </div>
     <hr />
-    <div class="mejora">
-        <div class="usuario">
-            <img src="/Img/default_user.jpg" alt="Manuela" height="100" width="100"/>
+    <div class="mejora" style="background-color:lightgreen">
+        <div class="usuario" style="align-self:center">
+            <img src="https://cdn.icon-icons.com/icons2/67/PNG/512/user_13230.png" height="100" width="100"/>
             <br />
-            <p>Manuela</p>
+            <p runat="server" id="Idea2_user" style="font:bold 24px arial, verdana; padding-left:15px" ></p>
         </div>
         <div class="comentario">
-            <h4>Mejora 2</h4>
-            <p>Como mejora iubarouyfbaifj rfniuafnai ehrf qouwf fhqbefqyubfj f ufybqifuqfhgq ouyb buvqneui buy qr uyfb qb unfbuo wbqnreiunq bi qnuivnqriuqnr</p>
+            <h4 runat="server" id="Idea2_h4"></h4>
+            <p runat="server" id="Idea2_p"></p>
         </div>
     </div>
     <hr />
