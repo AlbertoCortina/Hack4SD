@@ -35,7 +35,7 @@
                         <div class="card-body">
                             <h4 class="card-title" >Ruta por la Senda del Oso</h4>
                             <p class="card-text">Visita la senda del Oso, uno de los lugares mas bonitos de Asturias</p>
-                            <asp:Button class="btn btn-primary btn-sm" ID="Button2" runat="server" Text="Experienimentar" OnClick="Button1_Click" />
+                            <asp:Button class="btn btn-primary btn-sm" ID="Button2" runat="server" Text="Experimentar" OnClick="Button1_Click" />
                         </div>
                     </div>
                     <div class="card text-white bg-dark mb-3" style="max-width: 20rem; display: block; float: left; width: 200px; padding: 25px 0; margin: 0; margin-top: 10px;">
@@ -43,7 +43,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Pista Filandesa</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <asp:Button class="btn btn-primary btn-sm" ID="Button1" runat="server" Text="Experienimentar" OnClick="Button1_Click" />
+                            <asp:Button class="btn btn-primary btn-sm" ID="Button1" runat="server" Text="Experimentar" OnClick="Button1_Click" />
 
                         </div>
                     </div>
