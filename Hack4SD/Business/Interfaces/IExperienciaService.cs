@@ -9,6 +9,6 @@ namespace Business.Interfaces
 {
     public interface IExperienciaService
     {
-        Experiencia getExperienciaByCiudadAndCategoria(String ciudad, String categoria);
+        List<Experiencia> getExperienciaByCiudadAndCategoria(String ciudad, String categoria);
     }
 }

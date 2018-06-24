@@ -9,6 +9,6 @@ namespace Persistence.Interfaces
 {
     public interface IExperienciaPersistence
     {
-        Experiencia getExperienciaByCiudadAndCategoria(String ciudad, String categoria);
+        List<Experiencia> getExperienciaByCiudadAndCategoria(String ciudad, String categoria);
     }
 }

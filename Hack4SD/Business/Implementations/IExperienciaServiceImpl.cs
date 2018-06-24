@@ -11,7 +11,7 @@ namespace Business.Implementations
 {
     class IExperienciaServiceImpl : IExperienciaService
     {
-        public Experiencia getExperienciaByCiudadAndCategoria(string ciudad, string categoria)
+        public List<Experiencia> getExperienciaByCiudadAndCategoria(string ciudad, string categoria)
         {
             return Factory.getPersistence().getExperienciaPersistence().getExperienciaByCiudadAndCategoria(ciudad, categoria);
         }
