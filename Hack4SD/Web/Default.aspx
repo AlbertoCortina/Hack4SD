@@ -8,8 +8,7 @@
     <script src="Scripts/connect.js"></script>
     <link href="Content/Buscador.css" rel="stylesheet" type="text/css" />
     <link href="Content/ConectTour.css" rel="stylesheet" type="text/css" />
-	
-
+    
     <script>
 
         jQuery.backstretch([
@@ -26,9 +25,8 @@
             <h1></h1>
         </div>
         <div class="form_buscador">
-            <input class="form_buscador" id="search_field" type="text" value="Buscar Ciudad..." onfocus="if (this.value == 'Buscar Ciudad...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar Ciudad...';}" />
+            <asp:DropDownList ID="ddlVisualTemplate" CssClass="dropdown" runat="server" LabelText="Visual Template:" AutoPostBack="true" OnSelectedIndexChanged="ddlVisualTemplate_SelectedIndexChanged" />
             <button type="button" class="btn btn-primary">Buscar</button>
-
         </div>
     </div>
 

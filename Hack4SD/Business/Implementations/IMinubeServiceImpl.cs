@@ -33,7 +33,7 @@ namespace Business.Implementations
 
         public List<City> getAllCities(String countryId)
         {
-            var url = "/cities?lang=es&country_id=63&api_key=" +  API_KEY;
+            var url = "/cities?lang=es&zone_id=994&country_id="+countryId+ "&latitude=43.362591851091&longitude=-5.8452008343656&api_key=" + API_KEY;
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(API_BASE + url);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "GET";
