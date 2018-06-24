@@ -14,5 +14,11 @@ namespace Business.Services.Impl
 
         public IUserService getUserService() => new IUserServiceImpl();
 
+        public IValoracionService getValoracionService() => new IValoracionServiceImpl();
+
+        public ICampañaService getCampañaService() => new ICampañaServiceImpl();
+        public IIdeaSostenibleService getIdeaSostenibleService() => new IIdeaSostenibleServiceImpl();
+        public IExperienciaService getExperienciaService() => new IExperienciaServiceImpl();
+
     }
 }

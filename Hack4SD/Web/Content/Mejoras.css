@@ -11573,11 +11573,17 @@ select.form-control {
     color: inherit;
 }
 
-.login {
-    margin: auto;
-    margin-top: 50px;
-    width: 50%;
+.mejora{
+    width:1000px;
 }
 
-.username {
+.mejora .usuario,
+.mejora .comentario {
+    display:inline-block;
+}
+.mejora .usuario {
+    width: 15%;
+}
+.mejora .comentario{
+    width:84%;
 }

@@ -11707,20 +11707,6 @@ h2 {
         background: #5f5f5f;
     }
 
-#Buscador {
-    background-color: white;
-    height: 50px;
-    width: 800px;
-    align-items: center;
-}
-
-#Submit {
-    background-color: white;
-    background-size: 20px, 20px;
-    padding-left: 30px;
-    width: 188px;
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
